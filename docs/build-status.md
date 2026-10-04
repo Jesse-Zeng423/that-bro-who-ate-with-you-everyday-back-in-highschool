@@ -439,3 +439,13 @@ Fresh-archive launch/export verification passed. Both actual shell launchers
 report Plate Memory 1.0.0. CI run 37166548415 passed on 3.10/3.12/3.14.
 Normal use is the default. No existing private records were reset or packaged.
 No DEV publication or real Harold trial has occurred.
+
+## Three-minute contest demo plan
+
+A timed, prompt-by-prompt screen recording guide is in docs/demo-recording-script.md.
+It opens in a fresh temporary profile, uses the labeled canned weekend fixture,
+shows offline warm-food discovery, selects an idea without calling it an order,
+exports and opens an actual standalone postcard, and times out at 2:50. English
+narration distinguishes canned guard behavior from local AI extraction and avoids
+Harold trial claims. The procedure was checked against the current menu/field states
+by source inspection; it is a plan, not a newly recorded or runtime-validated video.

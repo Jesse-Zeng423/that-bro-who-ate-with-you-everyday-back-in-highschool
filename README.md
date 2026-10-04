@@ -419,3 +419,8 @@ Postcards now use a bundled fictional wax-crayon drawing of two friends eating
 together, a short title and your note. The original note is preserved. The image
 is embedded locally in HTML; no runtime image service or remote asset is needed.
 [Illustration prompt and provenance](assets/postcards/illustration-prompt.md).
+
+A timed [three-minute demo recording script](docs/demo-recording-script.md) covers
+the guard story, food discovery and real postcard export with exact terminal inputs.
+
+Recording the hackathon presentation? Follow the [three-minute terminal demo](docs/demo-recording-script.md); it lists the keys, timing and factual narration.
