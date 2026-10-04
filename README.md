@@ -420,7 +420,8 @@ together, a short title and your note. The original note is preserved. The image
 is embedded locally in HTML; no runtime image service or remote asset is needed.
 [Illustration prompt and provenance](assets/postcards/illustration-prompt.md).
 
-A timed [three-minute demo recording script](docs/demo-recording-script.md) covers
-the guard story, food discovery and real postcard export with exact terminal inputs.
+The [three-minute demo recording guide](docs/demo-recording-script.md) has Chinese
+operating instructions, exact terminal inputs and English narration for the guard,
+food discovery and actual postcard export.
 
 Recording the hackathon presentation? Follow the [three-minute terminal demo](docs/demo-recording-script.md); it lists the keys, timing and factual narration.
