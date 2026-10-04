@@ -10,12 +10,16 @@
 ## 录制前准备
 
 1. 解压 v1.0.0 正式版，或进入项目文件夹，在该文件夹打开终端。
-2. 创建临时目录，并启动合成演示模式：
+2. 确认终端当前目录是解压后的项目文件夹。把这条**完整命令**复制进终端并
+   按回车。它会创建临时目录、启动合成 Demo；完成并退出后，会自动打开刚刚
+   导出的 HTML 卡片：
 
    ```sh
-   DEMO_DIR="$(mktemp -d /tmp/plate-memory-demo.XXXXXX)"
-   python3 plate-memory.py --demo --language en --profile "$DEMO_DIR/friend.json"
+   export DEMO_DIR="$(mktemp -d /tmp/plate-memory-demo.XXXXXX)" && python3 plate-memory.py --demo --language en --profile "$DEMO_DIR/friend.json" && open "$DEMO_DIR"/postcards/postcard-*.html
    ```
+
+   录制期间，按下一节的顺序逐项输入。完成后在 app 里按 `0`，浏览器就会自动
+   打开导出的明信片。
 
 3. 终端宽度设为 85–90 列，打开终端装饰和颜色，关闭无关窗口、通知和其他
    隐私内容。临时目录只用于本次录制；合成资料留在内存里，只有最后主动导出
@@ -33,47 +37,41 @@
 | 0:55–1:25 | 回到饭桌后按 `1` 找东西吃，按 `2` 选食堂，输入 `something warm`，再按 `1` 打开一条建议。停在 **Food family**、**On the menu** 和相近选择提示。 | “When all you know is that you want something warm, offline food references offer a few directions. They don’t claim a shop has it, or guess ingredients, price or nutrition.” |
 | 1:25–1:48 | 按 `4` 看相近选择，按 `1` 打开其中一条，再按 `1` 选它。停在“没有下单或记录为已吃”的说明和食堂下一步。 | “The related choices help you keep browsing. Choosing one is just a plan: check the cafeteria board before you walk over.” |
 | 1:48–2:34 | 回饭桌后按 `4` 写下次吃饭的留言。名字依次输入 `Synthetic Jesse`、`Synthetic Bro`，留言输入 `Different campuses. Still my lunch buddy. See you at the table soon. 🥣`。确认加入食物，选 `1 Export`、`1 Share folder`，确认加入项目链接。在保存路径处直接回车，采用临时目录的默认路径。停在预览、**Saved locally. Nothing was sent.** 和文件列表。 | “The card is a little note from one friend to another. The meal is identified as an idea for next time. The export makes a real HTML card, text copy and importable lunchbox file, with a checksum manifest. I choose whether to include the public quick-start link; nothing sends automatically.” |
-| 2:34–2:50 | 按 `0` 退出到 shell 提示符，输入下方打开明信片的命令。让离线卡片填满画面。 | “The drawing is fictional; the words are mine. The HTML carries its artwork with it and opens offline. That’s Plate Memory: practical food ideas, careful memory decisions, and a place for your friend at the table.” |
+| 2:34–2:50 | 按 `0` 退出。启动命令会自动打开导出的明信片；让离线卡片填满画面。 | “The drawing is fictional; the words are mine. The HTML carries its artwork with it and opens offline. That’s Plate Memory: practical food ideas, careful memory decisions, and a place for your friend at the table.” |
 
-退出应用后，在同一个终端输入：
+启动命令最后的 `open` 会在浏览器打开刚才导出的独立 HTML 明信片。它本地自带插画，无需联网。
 
-```sh
-open "$DEMO_DIR"/postcards/postcard-*.html
-```
+## 终端里逐项输入什么
 
-这会在浏览器打开刚才导出的独立 HTML 明信片。它本地自带插画，无需联网。
+先粘贴上面的启动命令。应用启动后，不要一次粘贴下面所有答案；请等当前屏幕
+出现对应提示，再输入本步骤的内容：
 
-## 按提示输入的顺序
+1. 饭桌主菜单 `Choose` → 输入 `6`（更多选项）。
+2. 更多选项 `Choose an option` → 输入 `demo`。
+3. `Scenario: weekday / weekend / stale / allergy` → 输入 `weekend`。等报告完成；
+   滚动展示 Saturday、`WEEKDAY_OUT_OF_SCOPE` 和
+   `HIGH_RISK_HUMAN_REVIEW_REQUIRED`，然后回到饭桌。
+4. 饭桌主菜单 `Choose` → 输入 `1`（找吃的）。
+5. 今天怎么样 `1 / 2` → 输入 `2`（去食堂）。
+6. `Anything you’re craving?` → 输入 `something warm`。
+7. 食物列表 `Number / food keyword` → 输入 `1`。
+8. 食物详情 `1 Pick / 2 Check ingredients / 3 Source / 4 Similar ideas` → 输入 `4`。
+9. 相近食物列表 → 输入 `1`。
+10. 食物详情 → 输入 `1`，确认选这个想法。看完“没有下单或记录为已吃”后回到饭桌。
+11. 饭桌主菜单 `Choose` → 输入 `4`（下次再一起吃）。
+12. `Your name or nickname` → 输入 `Synthetic Jesse`。
+13. `Your friend’s name or nickname` → 输入 `Synthetic Bro`。
+14. `A little message for your friend` → 输入 `Different campuses. Still my lunch buddy. See you at the table soon. 🥣`。
+15. `Include this food idea ... yes / no` → 输入 `yes`。
+16. 明信片预览 `1 Export / 2 Edit note / 3 Style` → 输入 `1`。
+17. 导出格式 `1 Share folder ...` → 输入 `1`。
+18. `Include the link to try Plate Memory? yes / no` → 输入 `yes`。
+19. `Save path` → **直接按回车**，使用新建临时目录中的默认位置。
+20. 等终端显示 `Saved locally. Nothing was sent.` 和导出的文件路径。饭桌主菜单
+    再输入 `0` 退出；启动命令会接着自动打开刚才的 `.html` 明信片。
 
-以下是录制时的提示清单，不要整段粘贴。每输入一项，都等终端出现下一条提示：
-
-```text
-6
- demo
-weekend
-1
-2
-something warm
-1
-4
-1
-1
-yes
-4
-Synthetic Jesse
-Synthetic Bro
-Different campuses. Still my lunch buddy. See you at the table soon. 🥣
-yes
-1
-1
-yes
-[在保存路径提示处按回车]
-0
-```
-
-输入 `demo` 时不要加前导空格。操作顺序是：更多 → 预设 guard 案例 → 饭桌 →
-搜索食物 → 相近选择 → 选一个想法 → 写明信片 → 导出分享文件夹 → 回饭桌 →
-退出。如果某一步比预想的耗时，缩短停留和旁白；过敏提醒部分不要快进。
+录制时间预算见上方时间表。滚动如果占时过多，可以缩短停留；过敏人工核对
+这段要让观众看清楚。合成案例报告和正式模型推理的区别也要说清楚。
 
 ## 录制时的准确表述
 
